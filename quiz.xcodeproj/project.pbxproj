@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F05B3C6207F980C00569FDA /* FancyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05B3C5207F980C00569FDA /* FancyImage.swift */; };
+		7F05B3C8207F9A6F00569FDA /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05B3C7207F9A6F00569FDA /* FancyView.swift */; };
 		7F569AE0207D27F600B1BFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F569ADF207D27F600B1BFFA /* AppDelegate.swift */; };
 		7F569AE5207D27F600B1BFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F569AE3207D27F600B1BFFA /* Main.storyboard */; };
 		7F569AE8207D27F600B1BFFA /* quiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F569AE6207D27F600B1BFFA /* quiz.xcdatamodeld */; };
@@ -23,6 +25,8 @@
 		0D7954E4A024FDBB77157D62 /* Pods-quiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-quiz/Pods-quiz.release.xcconfig"; sourceTree = "<group>"; };
 		0FABECE0B6586E600DDE7A05 /* Pods_quiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		626E6F07267469DFC5D0BF90 /* Pods-quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quiz/Pods-quiz.debug.xcconfig"; sourceTree = "<group>"; };
+		7F05B3C5207F980C00569FDA /* FancyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyImage.swift; sourceTree = "<group>"; };
+		7F05B3C7207F9A6F00569FDA /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		7F569ADC207D27F600B1BFFA /* quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F569ADF207D27F600B1BFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F569AE4207D27F600B1BFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				7F569AE3207D27F600B1BFFA /* Main.storyboard */,
+				7F05B3C5207F980C00569FDA /* FancyImage.swift */,
+				7F05B3C7207F9A6F00569FDA /* FancyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,7 +254,9 @@
 				7F569AE0207D27F600B1BFFA /* AppDelegate.swift in Sources */,
 				7F978096207E97450040CCD4 /* Constans.swift in Sources */,
 				7F569AF5207D290C00B1BFFA /* TableVC.swift in Sources */,
+				7F05B3C6207F980C00569FDA /* FancyImage.swift in Sources */,
 				7F978098207E97850040CCD4 /* Item.swift in Sources */,
+				7F05B3C8207F9A6F00569FDA /* FancyView.swift in Sources */,
 				7F569AE8207D27F600B1BFFA /* quiz.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +405,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2X43E6VD5;
 				INFOPLIST_FILE = quiz/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = karolZmyslowski.quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -413,7 +424,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2X43E6VD5;
 				INFOPLIST_FILE = quiz/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = karolZmyslowski.quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

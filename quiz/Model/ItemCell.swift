@@ -16,7 +16,19 @@ class ItemCell: UITableViewCell {
     
     func configureCell(item: Item){
         titleLbn.text = item.title
-        
+        subtextLbn.text = item.content
+        let url = URL(string: item.photoURL)!
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: url)
+                DispatchQueue.main.sync {
+                    self.mainImage.image = UIImage(data: data)
+                }
+            }catch{
+                
+            }
+        }
     }
-
 }
+
+

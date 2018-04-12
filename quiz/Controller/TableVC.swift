@@ -11,6 +11,8 @@ import Alamofire
 
 class TableVC: UITableViewController {
 
+    var items: [Item] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,8 +20,9 @@ class TableVC: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         downloadData {
-            
+            self.tableView.reloadData()
         }
+        
     }
 
     // MARK: - Table view data source
@@ -31,16 +34,25 @@ class TableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return items.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-
-
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ItemCell {
+            let item = items[indexPath.row]
+            cell.configureCell(item: item)
+            
+            
+            return cell
+        }
+        else {
+            return ItemCell()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
  
     
@@ -54,7 +66,7 @@ class TableVC: UITableViewController {
                 if let items = dict["items"] as? [Dictionary<String,AnyObject>] {
                     for obj in items {
                         let item = Item(dict: obj)
-                        print(item.title)
+                        self.items.append(item)
                     }
                 }
             }
