@@ -54,7 +54,29 @@ class TableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
- 
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+            let sender = items[indexPath.row].id
+            performSegue(withIdentifier: "QVC", sender: sender)
+    
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "QVC" {
+            if let destination = segue.destination as? QuestionVC {
+                if let item = sender as? Int {
+                    destination.id = item
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+     // MARK: - JSON Parsing
     
     func downloadData(completed: @escaping DownloadComplete) {
         let dataURL = URL(string: ITEMS_URL)!
