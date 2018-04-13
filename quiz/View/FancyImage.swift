@@ -17,6 +17,7 @@ class FancyImage: UIImageView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        
         layer.cornerRadius = self.frame.height / 7
     }
     
