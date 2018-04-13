@@ -52,14 +52,16 @@ class TableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return (view.frame.width + 75) / (16 / 9)
     }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
             let sender = items[indexPath.row].id
+            print(sender)
             performSegue(withIdentifier: "QVC", sender: sender)
+        
     
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,9 +73,6 @@ class TableVC: UITableViewController {
             }
         }
     }
-    
-    
-    
     
     
      // MARK: - JSON Parsing

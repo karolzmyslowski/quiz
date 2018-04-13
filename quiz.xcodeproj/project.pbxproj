@@ -23,6 +23,7 @@
 		7FA2DEC5207FDCDC008FAE7E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2DEC4207FDCDC008FAE7E /* Question.swift */; };
 		7FA2DEC7207FE321008FAE7E /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA2DEC6207FE321008FAE7E /* Answers.swift */; };
 		7FA32FAD207D5AAE001A6052 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA32FAC207D5AAE001A6052 /* ItemCell.swift */; };
+		7FBE0C0E2080C91F00F8FAA3 /* ScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE0C0D2080C91F00F8FAA3 /* ScoreVC.swift */; };
 		B81E4ACC7ADC0A55378FAD9E /* Pods_quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FABECE0B6586E600DDE7A05 /* Pods_quiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		7FA2DEC4207FDCDC008FAE7E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		7FA2DEC6207FE321008FAE7E /* Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		7FA32FAC207D5AAE001A6052 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		7FBE0C0D2080C91F00F8FAA3 /* ScoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				7FA2DEC2207FDA77008FAE7E /* QuestionVC.swift */,
 				7F569AF4207D290C00B1BFFA /* TableVC.swift */,
 				7F569ADF207D27F600B1BFFA /* AppDelegate.swift */,
+				7FBE0C0D2080C91F00F8FAA3 /* ScoreVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				7F05B3C6207F980C00569FDA /* FancyImage.swift in Sources */,
 				7FA2DEC5207FDCDC008FAE7E /* Question.swift in Sources */,
 				7F978098207E97850040CCD4 /* Item.swift in Sources */,
+				7FBE0C0E2080C91F00F8FAA3 /* ScoreVC.swift in Sources */,
 				7F05B3C8207F9A6F00569FDA /* FancyView.swift in Sources */,
 				7FA2DEC3207FDA77008FAE7E /* QuestionVC.swift in Sources */,
 				7FA2DEC7207FE321008FAE7E /* Answers.swift in Sources */,
