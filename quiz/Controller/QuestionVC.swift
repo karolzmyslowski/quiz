@@ -42,6 +42,7 @@ class QuestionVC: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         if sender.tag == correctAnswer {
             score += 1
+        
         }
         resetButton()
         questionNumber += 1
@@ -83,6 +84,8 @@ class QuestionVC: UIViewController {
                 if let url = URL(string: questions[questionNumber].imageURL){
                     let data = try Data(contentsOf: url)
                     self.image.image = UIImage(data: data)
+                } else {
+                     image.image = UIImage(named: "5a3698262003f3.5250149315135273341311")
                 }
             }
             catch   {}
@@ -110,14 +113,16 @@ class QuestionVC: UIViewController {
     func restartUI(){
         score = 0
         questionNumber = 0
+         image.image = UIImage(named: "5a3698262003f3.5250149315135273341311")
         updateQuestion()
+        
     }
     
     func resetButton() {
         for i in 0...3 {
+            buttons[i].setTitle("", for: .normal)
             buttons[i].isEnabled = false
             buttons[i].backgroundColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
-            buttons[i].setTitle("", for: .normal)
             buttons[i].layer.shadowOpacity = 0
             buttons[i].layer.borderWidth = 0
         }

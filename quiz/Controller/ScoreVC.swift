@@ -11,6 +11,7 @@ import UIKit
 class ScoreVC: UIViewController {
 
     @IBOutlet weak var scoreLbn: UILabel!
+    @IBOutlet weak var contentLbn: UILabel!
     
     var score: Int?
     var id: Int?
@@ -19,6 +20,7 @@ class ScoreVC: UIViewController {
         super.viewDidLoad()
         
         scoreLbn.text = "\(score!)%"
+        setContentText()
     }
 
   
@@ -26,6 +28,26 @@ class ScoreVC: UIViewController {
             performSegue(withIdentifier: "again", sender: id!)
     
     }
+    
+    func setContentText() {
+        if score! < 20 {
+            contentLbn.text = "Słabiutko"
+            return
+        } else if score! < 40 {
+            contentLbn.text = "Chyba się nie przyłożyłeś"
+            return
+        } else if score! < 60 {
+            contentLbn.text = "Stać Cię na wiecej"
+        } else if score! < 80 {
+            contentLbn.text = "Brawo!"
+        } else if score! < 101 {
+            contentLbn.text = "Super!"
+        }
+        
+    }
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "again" {
             if let destination = segue.destination as? QuestionVC {

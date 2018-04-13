@@ -174,7 +174,7 @@
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUl-wY-MFV" customClass="RoundlyButton" customModule="quiz" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="55.5"/>
                                                         <color key="backgroundColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                         <state key="normal">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -182,37 +182,37 @@
                                                             <action selector="buttonPressed:" destination="B2o-jG-hpO" eventType="touchUpInside" id="EyP-p5-LSe"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VS2-1k-xLH" customClass="RoundlyButton" customModule="quiz" customModuleProvider="target">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzZ-gV-TVv" customClass="RoundlyButton" customModule="quiz" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="70.5" width="343" height="55.5"/>
-                                                        <color key="backgroundColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                        <color key="backgroundColor" red="0.33725490200000002" green="0.57254901960000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                         <state key="normal">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="buttonPressed:" destination="B2o-jG-hpO" eventType="touchUpInside" id="TCh-hp-GO0"/>
+                                                            <action selector="buttonPressed:" destination="B2o-jG-hpO" eventType="touchUpInside" id="pKW-Bx-eS3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZe-ZN-1jH" customClass="RoundlyButton" customModule="quiz" customModuleProvider="target">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTh-nN-ONs" customClass="RoundlyButton" customModule="quiz" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="141" width="343" height="55"/>
-                                                        <color key="backgroundColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                        <color key="backgroundColor" red="0.33725490200000002" green="0.57254901960000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                         <state key="normal">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="buttonPressed:" destination="B2o-jG-hpO" eventType="touchUpInside" id="f1g-dQ-tmv"/>
+                                                            <action selector="buttonPressed:" destination="B2o-jG-hpO" eventType="touchUpInside" id="LgW-cd-UQn"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cy-WS-FW6" customClass="RoundlyButton" customModule="quiz" customModuleProvider="target">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afs-U1-Cik" customClass="RoundlyButton" customModule="quiz" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="211" width="343" height="55.5"/>
-                                                        <color key="backgroundColor" red="0.33725490196078434" green="0.5725490196078431" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                        <color key="backgroundColor" red="0.33725490200000002" green="0.57254901960000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                         <state key="normal">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="buttonPressed:" destination="B2o-jG-hpO" eventType="touchUpInside" id="8fK-IQ-2Dg"/>
+                                                            <action selector="buttonPressed:" destination="B2o-jG-hpO" eventType="touchUpInside" id="bQn-Gf-JWK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -248,9 +248,9 @@
                         <outlet property="questionLbn" destination="cO8-bl-Fmq" id="XCe-aS-x7Y"/>
                         <outlet property="scoreLbn" destination="wIV-q0-FuR" id="uev-7k-Is5"/>
                         <outletCollection property="buttons" destination="zUl-wY-MFV" collectionClass="NSMutableArray" id="sz4-qx-Tb4"/>
-                        <outletCollection property="buttons" destination="VS2-1k-xLH" collectionClass="NSMutableArray" id="7TI-gx-HIE"/>
-                        <outletCollection property="buttons" destination="fZe-ZN-1jH" collectionClass="NSMutableArray" id="FrD-m6-p89"/>
-                        <outletCollection property="buttons" destination="6Cy-WS-FW6" collectionClass="NSMutableArray" id="wIJ-9R-mFK"/>
+                        <outletCollection property="buttons" destination="DzZ-gV-TVv" collectionClass="NSMutableArray" id="E0u-Ah-pEd"/>
+                        <outletCollection property="buttons" destination="pTh-nN-ONs" collectionClass="NSMutableArray" id="cg9-tl-tlr"/>
+                        <outletCollection property="buttons" destination="Afs-U1-Cik" collectionClass="NSMutableArray" id="cAO-d2-oJJ"/>
                         <segue destination="bcl-06-rxm" kind="show" identifier="toScore" id="wfc-uN-vyA"/>
                     </connections>
                 </viewController>
@@ -272,8 +272,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eP-fW-0nd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brawo!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-kk-QQW">
-                                                <rect key="frame" x="133.5" y="61.5" width="108.5" height="38.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyh-kk-QQW">
+                                                <rect key="frame" x="188" y="80.5" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -364,6 +364,7 @@
                         <viewLayoutGuide key="safeArea" id="RmP-tX-Tr2"/>
                     </view>
                     <connections>
+                        <outlet property="contentLbn" destination="Dyh-kk-QQW" id="Kh0-yS-4Fc"/>
                         <outlet property="scoreLbn" destination="XFC-e6-e1G" id="H8c-dK-yRu"/>
                         <segue destination="B2o-jG-hpO" kind="show" identifier="again" id="BS9-3Z-eHz"/>
                     </connections>
@@ -377,6 +378,6 @@
         <image name="5a3698262003f3.5250149315135273341311" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BS9-3Z-eHz"/>
+        <segue reference="yc8-Jm-Yyt"/>
     </inferredMetricsTieBreakers>
 </document>

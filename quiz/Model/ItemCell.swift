@@ -17,18 +17,36 @@ class ItemCell: UITableViewCell {
     func configureCell(item: Item){
         titleLbn.text = item.title
         subtextLbn.text = item.content
-        let url = URL(string: item.photoURL)!
-        DispatchQueue.global().async {
-            do {
-                let data = try Data(contentsOf: url)
-                DispatchQueue.main.sync {
-                    self.mainImage.image = UIImage(data: data)
-                }
-            }catch{
-                
+        getImageFromWeb(item.photoURL) { (image) in
+            if let image = image {
+                self.mainImage.image = image
             }
         }
     }
+    
+    func getImageFromWeb(_ urlString: String, closure: @escaping (UIImage?) -> ()) {
+        guard let url = URL(string: urlString) else {
+            return closure(nil)
+        }
+        let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                print("error: \(String(describing: error))")
+                return closure(nil)
+            }
+            guard response != nil else {
+                print("no response")
+                return closure(nil)
+            }
+            guard data != nil else {
+                print("no data")
+                return closure(nil)
+            }
+            DispatchQueue.main.async {
+                closure(UIImage(data: data!))
+            }
+        }; task.resume()
+    }
+    
 }
 
 
