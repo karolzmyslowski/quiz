@@ -25,7 +25,7 @@ class QuestionVC: UIViewController {
     var questions: [Question] = []
     var questionNumber:Int = 0
     var score: Int = 0
-    var selectedAnswer: Int = 0
+    var correctAnswer: Int = 0
     var id: Int?
     
     override func viewDidLoad() {
@@ -40,21 +40,19 @@ class QuestionVC: UIViewController {
         downloadQuestions {
             // Update UI
             self.updateQuestion()
+            self.updateUI()
         }
         
     }
     
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        if sender.tag == 1 {
-            
-        } else if sender.tag == 2 {
-            
-        }else if sender.tag == 3 {
-            
-        }else if sender.tag == 4 {
-            
+        if sender.tag == correctAnswer {
+            score += 1
         }
+        questionNumber += 1
+        updateQuestion()
+        
     }
     
     
@@ -85,31 +83,44 @@ class QuestionVC: UIViewController {
     
     func updateQuestion(){
         
+        if questionNumber < questions.count - 1 {
+            
             do {
                 if let url = URL(string: questions[questionNumber].imageURL){
-                     let data = try Data(contentsOf: url)
+                    let data = try Data(contentsOf: url)
                     self.image.image = UIImage(data: data)
                 }
-            }catch{
-        }
-        
-        questionLbn.text = questions[questionNumber].text
-        
-        for i in 0..<questions[questionNumber].answers.count {
-            buttons[i].setTitle(questions[questionNumber].answers[i].text, for: .normal)
-            if questions[questionNumber].answers[i].isCorrect {
-                selectedAnswer = 1 + i
-                print(selectedAnswer)
             }
+            catch{
+            }
+            
+            questionLbn.text = questions[questionNumber].text
+            
+            for i in 0..<questions[questionNumber].answers.count {
+                buttons[i].setTitle(questions[questionNumber].answers[i].text, for: .normal)
+                if questions[questionNumber].answers[i].isCorrect {
+                    correctAnswer = 1 + i
+                    print(correctAnswer)
+                }
+            }
+            
         }
-        
+       updateUI()
       
     }
     
     func updateUI() {
+        scoreLbn.text = "Wynik: \(score)"
+        counterLbn.text = "\(questionNumber + 1)/\(questions.count)"
+        progressView.frame.size.width = (view.frame.size.width / CGFloat(questions.count)) * CGFloat(questionNumber + 1)
         
     }
     
+    func restartUI(){
+        score = 0
+        questionNumber = 0
+        updateQuestion()
+    }
     
     /*
     // MARK: - Navigation

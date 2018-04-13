@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7F05B3C6207F980C00569FDA /* FancyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05B3C5207F980C00569FDA /* FancyImage.swift */; };
 		7F05B3C8207F9A6F00569FDA /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05B3C7207F9A6F00569FDA /* FancyView.swift */; };
+		7F2B4F8720807380004F925B /* RoundlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B4F8620807380004F925B /* RoundlyView.swift */; };
+		7F2B4F892080786B004F925B /* RoundlyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B4F882080786B004F925B /* RoundlyButton.swift */; };
 		7F569AE0207D27F600B1BFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F569ADF207D27F600B1BFFA /* AppDelegate.swift */; };
 		7F569AE5207D27F600B1BFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F569AE3207D27F600B1BFFA /* Main.storyboard */; };
 		7F569AE8207D27F600B1BFFA /* quiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F569AE6207D27F600B1BFFA /* quiz.xcdatamodeld */; };
@@ -30,6 +32,8 @@
 		626E6F07267469DFC5D0BF90 /* Pods-quiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quiz/Pods-quiz.debug.xcconfig"; sourceTree = "<group>"; };
 		7F05B3C5207F980C00569FDA /* FancyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyImage.swift; sourceTree = "<group>"; };
 		7F05B3C7207F9A6F00569FDA /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		7F2B4F8620807380004F925B /* RoundlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundlyView.swift; sourceTree = "<group>"; };
+		7F2B4F882080786B004F925B /* RoundlyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundlyButton.swift; sourceTree = "<group>"; };
 		7F569ADC207D27F600B1BFFA /* quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F569ADF207D27F600B1BFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F569AE4207D27F600B1BFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				7F569AE3207D27F600B1BFFA /* Main.storyboard */,
 				7F05B3C5207F980C00569FDA /* FancyImage.swift */,
 				7F05B3C7207F9A6F00569FDA /* FancyView.swift */,
+				7F2B4F8620807380004F925B /* RoundlyView.swift */,
+				7F2B4F882080786B004F925B /* RoundlyButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,7 +268,9 @@
 				7FA32FAD207D5AAE001A6052 /* ItemCell.swift in Sources */,
 				7F569AE0207D27F600B1BFFA /* AppDelegate.swift in Sources */,
 				7F978096207E97450040CCD4 /* Constans.swift in Sources */,
+				7F2B4F892080786B004F925B /* RoundlyButton.swift in Sources */,
 				7F569AF5207D290C00B1BFFA /* TableVC.swift in Sources */,
+				7F2B4F8720807380004F925B /* RoundlyView.swift in Sources */,
 				7F05B3C6207F980C00569FDA /* FancyImage.swift in Sources */,
 				7FA2DEC5207FDCDC008FAE7E /* Question.swift in Sources */,
 				7F978098207E97850040CCD4 /* Item.swift in Sources */,
