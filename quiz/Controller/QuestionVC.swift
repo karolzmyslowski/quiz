@@ -8,7 +8,8 @@
 
 import UIKit
 import Alamofire
-class QuestionVC: UIViewController {
+
+class QuestionVC: UIViewController, ScoreVCDelegate{
 
     @IBOutlet weak var counterLbn: UILabel!
     @IBOutlet weak var scoreLbn: UILabel!
@@ -16,7 +17,8 @@ class QuestionVC: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var questionLbn: UILabel!
     
-    @IBOutlet var buttons: [UIButton]!
+    @IBOutlet var buttons: [RoundlyButton]!
+    @IBOutlet var labels: [UILabel]!
     
     var questions: [Question] = []
     var questionNumber:Int = 0
@@ -33,10 +35,18 @@ class QuestionVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        questions = []
+        resetButton()
+        score = 0
+        correctAnswer = 0
+        questionNumber = 0
         downloadQuestions {
             self.updateQuestion()
             self.updateUI()
         }
+    }
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        _ = navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -99,14 +109,14 @@ class QuestionVC: UIViewController {
                     print(correctAnswer)
                 }
             }
+            updateUI()
         }
-       updateUI()
     }
     
     func updateUI() {
-        scoreLbn.text = "Wynik: \(score)"
-        counterLbn.text = "\(questionNumber + 1)/\(questions.count)"
-        progressView.frame.size.width = ((view.frame.size.width - 16) / CGFloat(questions.count))  * CGFloat(questionNumber + 1)
+            scoreLbn.text = "Wynik: \(score)"
+            counterLbn.text = "\(questionNumber + 1)/\(questions.count)"
+            progressView.frame.size.width = ((view.frame.size.width - 16) / CGFloat(questions.count))  * CGFloat(questionNumber + 1)
         
     }
     
@@ -118,27 +128,20 @@ class QuestionVC: UIViewController {
         
     }
     
-    func resetButton() {
+    func presentButton(i: Int){
+        buttons[i].present()
+        labels[i].text = questions[questionNumber].answers[i].text
+    }
+    
+    func resetButton(){
         for i in 0...3 {
-            buttons[i].setTitle("", for: .normal)
-            buttons[i].isEnabled = false
-            buttons[i].backgroundColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
-            buttons[i].layer.shadowOpacity = 0
-            buttons[i].layer.borderWidth = 0
+            buttons[i].reset()
+            labels[i].text = ""
         }
     }
     
-    func presentButton(i:Int){
-        buttons[i].setTitle(questions[questionNumber].answers[i].text, for: .normal)
-        buttons[i].isEnabled = true
-        buttons[i].backgroundColor = UIColor(red: 86/255, green: 146/255, blue: 183/255, alpha: 1)
-        buttons[i].layer.shadowOpacity = 0.8
-        buttons[i].layer.borderWidth = 0
-        buttons[i].layer.shadowColor = UIColor(red: 86/255, green: 146/255, blue: 183/255, alpha: 0.6).cgColor
-        buttons[i].layer.shadowRadius = 5.0
-        buttons[i].layer.shadowOffset = CGSize(width: 2, height: 2)
-        buttons[i].layer.cornerRadius = 5
-    }
+    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toScore" {
@@ -150,4 +153,9 @@ class QuestionVC: UIViewController {
             }
         }
     }
+    
+    func id(controller: ScoreVC, id: Int) {
+        self.id = id
+    }
+
 }

@@ -10,7 +10,6 @@ import UIKit
 
 class FancyView: UIView {
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

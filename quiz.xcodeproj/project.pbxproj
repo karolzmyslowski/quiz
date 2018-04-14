@@ -93,6 +93,7 @@
 		7F569ADE207D27F600B1BFFA /* quiz */ = {
 			isa = PBXGroup;
 			children = (
+				7F924AA4208240DF00C6303C /* Storyboards */,
 				7F978093207E968E0040CCD4 /* Model */,
 				7F978092207E96100040CCD4 /* View */,
 				7F978091207E95A90040CCD4 /* Controller */,
@@ -103,12 +104,20 @@
 			path = quiz;
 			sourceTree = "<group>";
 		};
+		7F924AA4208240DF00C6303C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7F569AE3207D27F600B1BFFA /* Main.storyboard */,
+				7F569AEB207D27F900B1BFFA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		7F978091207E95A90040CCD4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				7FA2DEC2207FDA77008FAE7E /* QuestionVC.swift */,
 				7F569AF4207D290C00B1BFFA /* TableVC.swift */,
-				7F569ADF207D27F600B1BFFA /* AppDelegate.swift */,
 				7FBE0C0D2080C91F00F8FAA3 /* ScoreVC.swift */,
 			);
 			path = Controller;
@@ -117,7 +126,6 @@
 		7F978092207E96100040CCD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7F569AE3207D27F600B1BFFA /* Main.storyboard */,
 				7F05B3C5207F980C00569FDA /* FancyImage.swift */,
 				7F05B3C7207F9A6F00569FDA /* FancyView.swift */,
 				7F2B4F8620807380004F925B /* RoundlyView.swift */,
@@ -130,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				7FA32FAC207D5AAE001A6052 /* ItemCell.swift */,
-				7F978095207E97450040CCD4 /* Constans.swift */,
 				7F978097207E97850040CCD4 /* Item.swift */,
 				7FA2DEC4207FDCDC008FAE7E /* Question.swift */,
 				7FA2DEC6207FE321008FAE7E /* Answers.swift */,
@@ -141,7 +148,8 @@
 		7F978094207E96B40040CCD4 /* Supp Files */ = {
 			isa = PBXGroup;
 			children = (
-				7F569AEB207D27F900B1BFFA /* LaunchScreen.storyboard */,
+				7F978095207E97450040CCD4 /* Constans.swift */,
+				7F569ADF207D27F600B1BFFA /* AppDelegate.swift */,
 				7F569AE9207D27F900B1BFFA /* Assets.xcassets */,
 			);
 			path = "Supp Files";

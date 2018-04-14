@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ScoreVCDelegate {
+    func id(controller: ScoreVC, id: Int)
+}
+
 class ScoreVC: UIViewController {
 
     @IBOutlet weak var scoreLbn: UILabel!
@@ -15,6 +19,7 @@ class ScoreVC: UIViewController {
     
     var score: Int?
     var id: Int?
+    var delegate: ScoreVCDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +28,15 @@ class ScoreVC: UIViewController {
         setContentText()
     }
 
-  
-    @IBAction func buttonPressed(_ sender: UIButton) {
-            performSegue(withIdentifier: "again", sender: id!)
     
+    @IBAction func gotoRootView(_ sender: Any) {
+        _ = navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        delegate?.id(controller: self, id: id!)
+        navigationController?.popViewController(animated: true)
     }
     
     func setContentText() {
@@ -46,16 +56,7 @@ class ScoreVC: UIViewController {
         
     }
     
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "again" {
-            if let destination = segue.destination as? QuestionVC {
-                if let item = sender as? Int {
-                    destination.id = item
-                }
-            }
-        }
-    }
 
 }
+
+

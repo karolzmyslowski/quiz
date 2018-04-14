@@ -54,7 +54,6 @@ class Question {
             if let tempImageURL = image["url"] as? String {
                 self._imageURL = tempImageURL
             }
-           // if let tempTextod
         }
         
         if let tempAnswers = dict["answers"] as? [Dictionary<String, AnyObject>] {
@@ -87,5 +86,4 @@ class Question {
             _text = tempText
         }
     }
-    
 }

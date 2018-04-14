@@ -13,14 +13,10 @@ import Foundation
 class Item {
     
     private var _id: Int!
-    
     private var _title: String!
-    
     private var _content: String!
-    
     private var _questions: Int!
-    
-    private var _photo: String!
+   private var _photo: String!
     
     var id: Int{
         if _id == nil{
@@ -35,6 +31,7 @@ class Item {
         }
         return _questions
     }
+    
     var title: String{
         if _title == nil{
             _title = ""
@@ -77,9 +74,6 @@ class Item {
             if let tempPhoto = mainPhoto["url"] as? String {
                 self._photo = tempPhoto
             }
-            
         }
     }
-    
-    
 }
